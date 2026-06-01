@@ -266,3 +266,5 @@ curl -X POST "http://localhost:8000/admin/reset-balance" \
 ## 联系方式
 
 如有问题，请通过 GitHub Issues 联系。
+
+![联系方式](docs/assets/image.png)

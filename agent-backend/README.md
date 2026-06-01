@@ -39,7 +39,7 @@ agent-backend/
 |--------|------|------|
 | `UPSTREAM_API_KEY` | 上游 API 密钥 | `sk-xxxxxx` |
 | `UPSTREAM_API_URL` | 上游 API 地址 | `https://api.deepseek.com/v1/chat/completions` |
-| `ADMIN_PWD` | 管理员密码 | `Yqqlm__G31cl`（请修改）|
+| `ADMIN_PWD` | 管理员密码 | 环境变量 `ADMIN_PWD`（请修改）|
 
 ### 可选配置
 
