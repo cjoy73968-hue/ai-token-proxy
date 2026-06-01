@@ -1,0 +1,8 @@
+# AI Token 代理服务系统
+# Copyright (C) 2026
+# License: GNU General Public License v3.0
+# https://www.gnu.org/licenses/
+
+fastapi
+uvicorn
+requests

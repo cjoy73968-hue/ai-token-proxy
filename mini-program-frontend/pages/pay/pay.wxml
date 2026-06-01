@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="info-card">
+    <text class="goods-name">{{goodsInfo.name || '加载中...'}}</text>
+    <text class="goods-desc">{{goodsInfo.desc || ''}}</text>
+    <text class="price">¥{{goodsInfo.price || 0}}</text>
+    <text class="quota" wx:if="{{goodsInfo.service_quota}}">配额：{{goodsInfo.service_quota}}万Token</text>
+  </view>
+
+  <view class="pay-section">
+    <button class="pay-btn" bindtap="submitPay" loading="{{loading}}">
+      {{loading ? '请求中...' : '立即支付'}}
+    </button>
+  </view>
+
+  <view class="tips">
+    <text>支付即表示您同意我们的服务条款</text>
+  </view>
+</view>

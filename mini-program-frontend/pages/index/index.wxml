@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="header">
+    <text class="title">正规AI Token算力套餐</text>
+    <text class="subtitle">正品Token 稳定高效</text>
+  </view>
+
+  <view class="goods-list">
+    <view class="item" wx:for="{{goodsList}}" wx:key="id" bindtap="goPay" data-id="{{item.id}}">
+      <view class="item-header">
+        <text class="name">{{item.name}}</text>
+        <text class="tag">{{item.tag}}</text>
+      </view>
+      <view class="desc">{{item.desc}}</view>
+      <view class="price-row">
+        <text class="price">¥{{item.price}}</text>
+        <text class="original">原价 ¥{{item.original}}</text>
+        <button class="buy-btn">立即购买</button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="tabs">
+    <text class="tab active">全部订单</text>
+  </view>
+
+  <view class="order-list" wx:if="{{orders.length > 0}}">
+    <view class="order-item" wx:for="{{orders}}" wx:key="order_no">
+      <view class="order-header">
+        <text class="order-no">{{item.order_no}}</text>
+        <text class="status {{item.status}}">{{item.status === 'paid' ? '已支付' : '待付款'}}</text>
+      </view>
+      <view class="order-body">
+        <text class="flow">到账流量: {{item.flow_num}}万Token</text>
+        <text class="money">¥{{item.total_fee / 100}}</text>
+      </view>
+      <view class="order-footer">
+        <text class="time">{{item.create_time}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="empty" wx:else>
+    <text>暂无订单</text>
+  </view>
+</view>

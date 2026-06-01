@@ -1,0 +1,57 @@
+<view class="container">
+  <view class="user-info">
+    <view class="avatar"></view>
+    <text class="nickname">用户</text>
+  </view>
+
+  <view class="balance-card">
+    <text class="label">我的服务配额</text>
+    <text class="value">{{flow}}</text>
+    <text class="unit">万Token</text>
+  </view>
+
+  <view class="token-section" wx:if="{{tokenKey}}">
+    <view class="section-title">我的 API 密钥</view>
+    <view class="token-box">
+      <text class="token-value">{{tokenKey}}</text>
+      <button class="copy-btn" bindtap="copyToken">复制</button>
+    </view>
+    <view class="token-tip">使用此密钥调用 API 服务</view>
+  </view>
+
+  <view class="model-section">
+    <view class="section-title">选择 AI 模型</view>
+    <picker mode="selector" range="{{modelList}}" range-key="name" bindchange="onModelChange">
+      <view class="model-picker">
+        <text>{{selectedModelName}}</text>
+        <text class="arrow">></text>
+      </view>
+    </picker>
+    <view class="model-tip">消耗比例: {{selectedModelRatio}}x</view>
+  </view>
+
+  <view class="usage-section" wx:if="{{modelUsage}}">
+    <view class="section-title">模型使用统计</view>
+    <view class="usage-list">
+      <view class="usage-item" wx:for="{{usageList}}" wx:key="model">
+        <text class="model-name">{{item.name}}</text>
+        <text class="usage-count">{{item.count}} 次</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="menu">
+    <view class="menu-item" bindtap="checkBalance">
+      <text>刷新余额</text>
+      <text class="arrow">></text>
+    </view>
+    <view class="menu-item">
+      <text>套餐说明</text>
+      <text class="arrow">></text>
+    </view>
+    <view class="menu-item">
+      <text>联系客服</text>
+      <text class="arrow">></text>
+    </view>
+  </view>
+</view>

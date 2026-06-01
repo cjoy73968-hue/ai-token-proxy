@@ -1,0 +1,12 @@
+[Unit]
+Description=TokenProxy Full Service
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/home/tokenproxy
+ExecStart=/home/tokenproxy/run.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
